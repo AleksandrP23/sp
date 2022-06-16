@@ -5307,6 +5307,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dark {
   background: #151515;
+  z-index: 100 !important;
+    position: relative;
 }
 
 .dark .box-switch .switch {
