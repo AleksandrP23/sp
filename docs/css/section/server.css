@@ -1,0 +1,6 @@
+.server {
+  margin-top: 100px;
+}
+.server__list {
+  display: flex;
+}

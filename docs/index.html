@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SAMP: Играй в GTA San Andreas по сети</title>
+  <meta name="keywords"
+    content="gta, гта, san, andreas, самп, samp, играть, сервер, server, servers, русский, sa-mp,	лучший, сети, по сети, online, онлайн, игра, сан, андреас, multiplayer, ip, 0.3, 0.3.7, 0.3dl, 0.3дл" />
+  <meta name="description"
+    content="SAMP: Русский сервер для игры в GTA San Andreas Online по сети. Здесь вы найдёте много друзей! Начни игру в пару кликов!" />
+
+  <link rel="preload" href="./fonts/Rubik-Black.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-Bold.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-ExtraBold.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-Light.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-Medium.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-Regular.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="./fonts/Rubik-SemiBold.woff2" as="font" type="font/woff2" />
+
+  <link rel="stylesheet" href="libs/normalze/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <style>
+    .true {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <header class="header">
+    <div class="container header__container">
+      <a href="./index.html" class="logo">
+        <picture>
+          <source class="img-mob" media="(max-width: 1200px)" srcset="./img/logomobile.png" />
+          <img class="img-desk" src="./img/logo.png" alt="Absolut" />
+        </picture>
+      </a>
+
+      <nav class="nav header__nav">
+        <ul id="nav" class="nav__list">
+          <li class="hassubmenu nav__item">
+            <a href="./startplay.html" id="el" class="nav__link nav__link--drop"><span>Начать играть</span></a>
+
+            <ul class="nav__list nav__list--dropdown dropdown-list dropdown-list--mob">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="https://files.sa-mp.ru/SAMPLauncher.exe" target="_blank"
+                  class="dropdown-list__link dropdown-list__link--download">Лаунчер</a>
+              </li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="https://files.sa-mp.ru/SAMP_Addon_2.6.exe" class="nav__link nav__link--drop"><span>SAMP
+                Addon</span></a>
+
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="https://files.sa-mp.ru/SAMP_Addon_2.6.exe" target="_blank"
+                  class="dropdown-list__link dropdown-list__link--download">Скачать</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./sampaddon.html" class="dropdown-list__link dropdown-list__link--desc">Описание</a>
+              </li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="./menu-loading.html" class="nav__link nav__link--drop">
+              <span>Загрузки</span></a>
+
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="https://files.sa-mp.ru/SAMPLauncher.exe" target="_blank"
+                  class="dropdown-list__link dropdown-list__link--download">Лаунчер</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./gta.html" class="dropdown-list__link dropdown-list__link--gta">GTA SA</a>
+                <ul class="">
+                  <li class="dropdown-list__item--d">
+                    <a href="https://files.sa-mp.ru/GTASanAndreasSetup.torrent" target="_blank"
+                      class="dropdown-list__link--d">Скачать</a>
+                  </li>
+                  <li class="dropdown-list__item--d">
+                    <a href="./gta.html" class="dropdown-list__link--d">Описание</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="https://files.sa-mp.ru/SA-MP_0.3DL.exe"
+                  class="dropdown-list__link dropdown-list__link--samp">SAMP 0.3DL</a>
+                <ul class="">
+                  <li class="dropdown-list__item--d">
+                    <a href="https://files.sa-mp.ru/SA-MP_0.3DL.exe" target="_blank"
+                      class="dropdown-list__link--d">Скачать</a>
+                  </li>
+                  <li class="dropdown-list__item--d">
+                    <a href="./samp.html" class="dropdown-list__link--d">Описание</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./mods.html" class="dropdown-list__link dropdown-list__link--mode">Модификации, оружие,
+                  скины</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./cars.html" class="dropdown-list__link dropdown-list__link--transport">Транспорт</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./speedometers.html" class="dropdown-list__link dropdown-list__link--speed">Спидометры</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./soft.html" class="dropdown-list__link dropdown-list__link--program">Программы</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./games.html" class="dropdown-list__link dropdown-list__link--games">Игры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="./menu-info.html" class="nav__link nav__link--drop">
+              <span>Информация</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./faq.html" class="dropdown-list__link dropdown-list__link--help">Помощь</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./colors.html" class="dropdown-list__link dropdown-list__link--color">Палитра цветов</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./rules.html" class="dropdown-list__link dropdown-list__link--rules">Правила RP и DM</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./news.html" class="dropdown-list__link dropdown-list__link--new">Новости</a>
+              </li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="./menu-servers.html" class="nav__link nav__link--drop">
+              <span>Сервера</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-platinum.html" class="dropdown-list__link dropdown-list__link--plat">Платинум</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-titanium.html" class="dropdown-list__link dropdown-list__link--tit">Титаниум</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-chromium.html" class="dropdown-list__link dropdown-list__link--chrom">Хромиум</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-aurum.html" class="dropdown-list__link dropdown-list__link--aur">Аурум</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-litium.html" class="dropdown-list__link dropdown-list__link--lit">Литиум</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="./server-deathmatch.html" class="dropdown-list__link dropdown-list__link--dea">Death Match</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav__item-f">
+            <a href="https://forum.sa-mp.ru/" class="nav__link">Форум</a>
+          </li>
+          <li class="nav__item-f">
+            <a href="./donat.html" class="nav__link nav__link--color nav__donat">Донат</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="burger" aria-label="Открыть меню">
+        <picture>
+          <source media="(max-width: 468px)" srcset="./img/menu.png" />
+          <img src="./img/menutext.png" alt="Absolut" />
+        </picture>
+      </button>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="container intro__container">
+      <div class="intro-left">
+        <h1 class="intro__title">
+          Играй в GTA <br />
+          San Andreas по сети
+        </h1>
+        <span class="intro__online">3 203 играют прямо сейчас</span>
+        <div class="intro-left__desc">
+          <a href="./startplay.html" class="intro__btn">Начать играть</a>
+        </div>
+      </div>
+      <div class="intro-right">
+        <div class="box-switch btn-toggle">
+          <div class="switch"></div>
+        </div>
+        <div class="intro-right__photo">
+          <img src="./img/index/pers.png" alt="pers" />
+        </div>
+        <a href="https://vk.com/gtasamp" target="_blank" class="intro-right__link">
+          <img src="./img/index/vk.png" alt="вконтакте" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="index-server">
+    <div class="container">
+      <div class="index-server__list">
+        <div class="index-server__item" draggable="true">
+          <button class="move-dnd">
+            <img src="./img/index/move-selection.png" alt="">
+          </button>
+          <div class="oc pl" data-thickness="13" data-value="0.819">
+            <div class="index-server__desc">
+              <a href="server-platinum.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-1.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-platinum.html">
+                  <h2 class="index-server__title">Платинум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#platinum')" id="platinum" class="index-server__ip">
+                    185.71.66.95:7771
+                  </button>
+                  <button onclick="copytext('#platinum')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <button class="move-dnd">
+            <img src="./img/index/move-selection.png" alt="">
+          </button>
+          <div class="oc chr" data-thickness="13" data-value="0.819">
+            <div class="index-server__desc">
+              <a href="server-chromium.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-2.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-chromium.html">
+                  <h2 class="index-server__title">Хромиум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#chromium')" id="chromium" class="index-server__ip">
+                    185.71.66.95:7773
+                  </button>
+                  <button onclick="copytext('#chromium')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <div class="oc ti" data-thickness="13" data-value="0.819">
+            <div class="index-server__desc">
+              <a href="server-titanium.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-3.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-titanium.html">
+                  <h2 class="index-server__title">Титаниум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#titanium')" id="titanium" class="index-server__ip">
+                    185.71.66.95:7772
+                  </button>
+                  <button onclick="copytext('#titanium')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <div class="oc ay" data-thickness="13" data-value="0.819">
+            <div class="index-server__desc">
+              <a href="server-aurum.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-4.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-aurum.html">
+                  <h2 class="index-server__title">Аурум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#aurum')" id="aurum" class="index-server__ip">
+                    185.71.66.95:7774
+                  </button>
+                  <button onclick="copytext('#aurum')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <div class="oc li" data-thickness="13" data-value="0.819">
+            <div class="index-server__desc">
+              <a href="server-litium.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-5.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-litium.html">
+                  <h2 class="index-server__title">Литиум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#litium')" id="litium" class="index-server__ip">
+                    185.71.66.95:7775
+                  </button>
+                  <button onclick="copytext('#litium')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <div class="oc de" data-thickness="13" data-value="1.0">
+            <div class="index-server__desc">
+              <a href="server-deathmatch.html" class="index-server__img-link">
+                <img src="./img/index/server/ser-6.svg" alt="" />
+              </a>
+              <div class="index-0">
+                <a href="server-deathmatch.html">
+                  <h2 class="index-server__title">Death Match</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('#death')" id="death" class="index-server__ip">
+                    185.71.66.95:7777
+                  </button>
+                  <button onclick="copytext('#death')" class="tooltip-text">
+                    Скопировать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <p>
+		Ширина экрана -
+		<b id="monitor-width"></b> px
+	</p>
+	<p>
+		Высота экрана -
+		<b id="monitor-height"></b> px
+	</p>
+
+	<p>
+		Ширина окна -
+		<b id="brows-width"></b> px
+	</p>
+	<p>
+		Высота окна -
+		<b id="brows-height"></b> px
+	</p> -->
+
+  <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+  <script src="libs/wow/wow.min.js"></script>
+  <script src="libs/progressbarJS/circle-progress.min.js"></script>
+  <script src="libs/izotope/izotope.min.js"></script>
+  <script src="libs/MixItUp/jquery.mixitup.min.js"></script>
+  <script src="libs/deviceJS/device.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
