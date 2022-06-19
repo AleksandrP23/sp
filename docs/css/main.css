@@ -1132,6 +1132,17 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  opacity: 0;
+  animation: showDiv .1s forwards;
+}
+
+@keyframes showDiv {
+  0%, 99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .index-server__item {
@@ -5307,8 +5318,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .dark {
   background: #151515;
-  z-index: 100 !important;
-    position: relative;
 }
 
 .dark .box-switch .switch {
