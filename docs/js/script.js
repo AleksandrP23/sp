@@ -1,97 +1,6 @@
 $(document).ready(function () {
   //  *Главная страница - заполнение circle* //
-  $(".pl")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".pl").circleProgress('redraw');
-  $(".chr")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".chr").circleProgress('redraw');
-  $(".ti")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".ti").circleProgress('redraw');
-
-  $(".ay")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".ay").circleProgress('redraw');
-  $(".li")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".li").circleProgress('redraw');
-  $(".de")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".de").circleProgress('redraw');
-  $(".all")
-    .circleProgress({
-      fill: {
-        color: "#1F85FE",
-      },
-      lineCap: "round",
-    })
-    .on("circle-animation-progress", function (event, progress, stepValue) {
-      $(this)
-        .find("strong")
-        .html(Math.round(1000 * stepValue));
-    });
-    $(".all").circleProgress('redraw');
+  canvas();
   let btn = document.querySelectorAll(".tooltip-text");
   btn.forEach(function (elem) {
     elem.addEventListener("click", function (event) {
@@ -205,9 +114,9 @@ var accordion = (function () {
       if (
         settings.oneOpen &&
         $this[0] !=
-        $this
-        .closest(".faq__list")
-        .find("> .faq__item.active > .faq__item-title")[0]
+          $this
+            .closest(".faq__list")
+            .find("> .faq__item.active > .faq__item-title")[0]
       ) {
         $this
           .closest(".faq__list")
@@ -310,10 +219,18 @@ if (btn) {
   function clickHandler() {
     btn.addEventListener("click", function () {
       const theme = localStorage.getItem("theme");
-      const logoM = localStorage.getItem("document.querySelector('.img-mob').srcset = './img/logomobile.png'");
-      const logo = localStorage.getItem("document.querySelector('.img-desk').src = './img/logo.png'");
-      const logoMd = localStorage.getItem("document.querySelector('.img-mob').srcset = './img/logomobile-dark.png'");
-      const logod = localStorage.getItem("document.querySelector('.img-desk').src = './img/logo-dark.png'");
+      const logoM = localStorage.getItem(
+        "document.querySelector('.img-mob').srcset = './img/logomobile.png'"
+      );
+      const logo = localStorage.getItem(
+        "document.querySelector('.img-desk').src = './img/logo.png'"
+      );
+      const logoMd = localStorage.getItem(
+        "document.querySelector('.img-mob').srcset = './img/logomobile-dark.png'"
+      );
+      const logod = localStorage.getItem(
+        "document.querySelector('.img-desk').src = './img/logo-dark.png'"
+      );
       if (theme === "dark") {
         localStorage.setItem("theme", "light");
         localStorage.setItem("logoM", "logoM");
@@ -334,32 +251,132 @@ if (btn) {
   clickHandler();
 }
 
-
 // drag and drop
 let opDnD = {
   buff: null,
   items: document.getElementsByClassName(`index-server__item`),
   events: {
-    beforeunload: () => window.localStorage.setItem(`key123456789`, Array.from(opDnD.items, elem => elem.innerHTML).join `;`),
-    load: () => window.localStorage.getItem(`key123456789`) ?
-      window.localStorage.getItem(`key123456789`).split `;`.forEach((v, i) => opDnD.items[i].innerHTML = v) : void 0,
-    dragstart: e => {
+    beforeunload: () =>
+      window.localStorage.setItem(
+        `key123456789`,
+        Array.from(opDnD.items, (elem) => elem.innerHTML).join`;`
+      ),
+    load: () =>
+      window.localStorage.getItem(`key123456789`)
+        ? window.localStorage.getItem(`key123456789`).split`;`.forEach(
+            (v, i) => (opDnD.items[i].innerHTML = v)
+          )
+        : void 0,
+    dragstart: (e) => {
       opDnD.buff = e.currentTarget;
-      e.dataTransfer.effectAllowed = 'move';
-      e.dataTransfer.setData('text/html', e.currentTarget.innerHTML);
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/html", e.currentTarget.innerHTML);
     },
-    dragover: e => {
+    dragover: (e) => {
       e.preventDefault();
-      e.dataTransfer.dropEffect = 'move';
+      e.dataTransfer.dropEffect = "move";
     },
-    drop: e => {
+    drop: (e) => {
       opDnD.buff.innerHTML = e.currentTarget.innerHTML;
-      e.currentTarget.innerHTML = e.dataTransfer.getData('text/html');
+      e.currentTarget.innerHTML = e.dataTransfer.getData("text/html");
+      let animate = false;
+      canvas(animate);
     },
   },
 };
 //console.log(Array.from(opDnD.items, elem => elem.innerHTML).join`;`);
-[`beforeunload`, `load`].forEach(evt => window.addEventListener(evt, opDnD.events[evt]));
-Array.from(opDnD.items, elem => {
-  [`dragstart`, `dragover`, `drop`].forEach(evt => elem.addEventListener(evt, opDnD.events[evt]));
+[`beforeunload`, `load`].forEach((evt) =>
+  window.addEventListener(evt, opDnD.events[evt])
+);
+Array.from(opDnD.items, (elem) => {
+  [`dragstart`, `dragover`, `drop`].forEach((evt) =>
+    elem.addEventListener(evt, opDnD.events[evt])
+  );
 });
+
+function canvas(animation) {
+  //  *Главная страница - заполнение circle* //
+  $(".pl")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+
+  $(".chr")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+
+  $(".ti")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+
+  $(".ay")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+
+  $(".li")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+
+  $(".de")
+    .circleProgress({
+      fill: {
+        color: "#1F85FE",
+      },
+      lineCap: "round",
+      animation,
+    })
+    .on("circle-animation-progress", function (event, progress, stepValue) {
+      $(this)
+        .find("strong")
+        .html(Math.round(1000 * stepValue));
+    });
+}
