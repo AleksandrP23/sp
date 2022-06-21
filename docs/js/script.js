@@ -235,3 +235,15 @@ function canvas(animation)
     .circleProgress({fill:{color:"#1F85FE",},lineCap:"round",animation,})
     .on("circle-animation-progress",function(event,progress,stepValue) {$(this).find("strong").html(Math.round(1000*stepValue));});
 }
+
+var el = document.getElementsByClassName('index-server__list'); 
+
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleEnd, false);
+  el.addEventListener("touchmove", handleMove, false);
+
+  function handleStart(event) {
+      // Handle the start of the touch
+  }
