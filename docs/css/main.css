@@ -5576,6 +5576,8 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .index-server__item {
   position: relative;
+    touch-action: none;
+  user-select: none;
 }
 
 .admin-akk input[type='number'] {
@@ -5590,4 +5592,8 @@ input[type="search"]::-webkit-search-cancel-button {
   background-repeat: no-repeat;
   background-position: top right;
   background-position: 96% 12px;
+}
+
+.active {
+  background-color: #0086ff;
 }
