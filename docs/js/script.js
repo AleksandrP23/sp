@@ -176,7 +176,31 @@ if (document.documentElement.clientWidth < 515)
   if (document.getElementById("searchtext")) document.getElementById("searchtext").placeholder = "";
 
 //drag and drop
-
+let opDnD = {
+  buff: null,
+  items: document.getElementsByClassName("index-server__item"),
+  events: {
+    beforeunload: () => window.localStorage.setItem(
+      "key123456789",
+      Array.from(opDnD.items, (elem) => elem.innerHTML).join('|')
+    ),
+    dragstart: (e) => {
+      opDnD.buff = e.currentTarget;
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/html", e.currentTarget.innerHTML);
+    },
+    dragover: (e) => {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+    },
+    drop: (e) => {
+      opDnD.buff.innerHTML = e.currentTarget.innerHTML;
+      e.currentTarget.innerHTML = e.dataTransfer.getData("text/html");
+      let animate = false;
+      canvas(animate);
+    },
+  },
+};
 
 function canvas(animation) {
   //Главная страница - заполнение circle
