@@ -5586,12 +5586,15 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 15px 20px 15px 60px;
 }
 
-.index-server__item:hover {
+.handle {
+  position: absolute;
   background-image: url(../img/index/move-selection.png);
-  background-size: 25px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top right;
-  background-position: 96% 12px;
+  background-position: center;
+  right: 12px;
+  width: 25px;
+  height: 25px;
 }
 
 .active {
