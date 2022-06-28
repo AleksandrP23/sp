@@ -284,4 +284,8 @@ function canvas(animation) {
 
 var container = document.getElementById('container');
 var rows = container.children;
-var sortableTable = dragula([container]);
+var sortableTable = dragula([container], {
+  moves: function (el, container, handle) {
+    return handle.classList.contains('handle');
+  }
+});
