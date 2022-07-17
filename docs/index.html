@@ -1,374 +1,406 @@
-
-
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<title>SAMP: Играй в GTA San Andreas по сети</title>
-	<meta name="keywords"
-		content="gta, гта, san, andreas, самп, samp, играть, сервер, server, servers, русский, sa-mp,	лучший, сети, по сети, online, онлайн, игра, сан, андреас, multiplayer, ip, 0.3, 0.3.7, 0.3dl, 0.3дл">
-	<meta name="description"
-		content="SAMP: Русский сервер для игры в GTA San Andreas Online по сети. Здесь вы найдёте много друзей! Начни игру в пару кликов!">
+  <title>SAMP: Играй в GTA San Andreas по сети</title>
+  <meta name="keywords"
+    content="gta, гта, san, andreas, самп, samp, играть, сервер, server, servers, русский, sa-mp,	лучший, сети, по сети, online, онлайн, игра, сан, андреас, multiplayer, ip, 0.3, 0.3.7, 0.3dl, 0.3дл">
+  <meta name="description"
+    content="SAMP: Русский сервер для игры в GTA San Andreas Online по сети. Здесь вы найдёте много друзей! Начни игру в пару кликов!">
 
-	<link rel="preload" href="./fonts/Rubik-Black.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./fonts/Rubik-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="./img/sun.png" as="image">
-	
-	<link rel="stylesheet" href="libs/normalze/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="libs/dragula/dragula.min.css">
+  <link rel="preload" href="./fonts/Rubik-Black.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rubik-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./img/sun.png" as="image">
 
-	<style>
-		.true {
-			font-size: 20px;
-			font-weight: bold;
-		}
-	</style>
+  <link rel="stylesheet" href="libs/normalze/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="libs/dragula/dragula.min.css">
+
+  <style>
+    .true {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-	<div class="overlay"></div>
-	<header class="header">
-		<div class="container header__container">
-			<a href="./" class="logo">
-				<picture>
-					<source class="img-mob" media="(max-width: 1200px)" srcset="./img/logomobile.png">
-					<img class="img-desk" src="./img/logo.png" alt="Absolut">
-				</picture>
-			</a>
-<script src="/js/theme.js"></script>
-	<nav class="nav header__nav">
-		<ul id="nav" class="nav__list">
-			<li class="hassubmenu nav__item"><a href="/play" id="el" class="nav__link nav__link--drop"><span>Начать играть</span></a>
+  <div class="overlay"></div>
+  <header class="header">
+    <div class="container header__container">
+      <a href="./" class="logo">
+        <picture>
+          <source class="img-mob" media="(max-width: 1200px)" srcset="./img/logomobile.png">
+          <img class="img-desk" src="./img/logo.png" alt="Absolut">
+        </picture>
+      </a>
+      <script src="./js/theme.js"></script>
+      <nav class="nav header__nav">
+        <ul id="nav" class="nav__list">
+          <li class="hassubmenu nav__item"><a href="/play" id="el" class="nav__link nav__link--drop"><span>Начать
+                играть</span></a>
 
-				<ul class="nav__list nav__list--dropdown dropdown-list dropdown-list--mob">
-					<li class="dropdown-list__item mobile-back">
-						<a href="" class="dropdown-list__link mobile-back__link">Назад</a>
-					</li>
-					<li class="dropdown-list__item">
-						<a href="https://files2.gta-samp.com/SAMPLauncher.exe"
-							class="dropdown-list__link dropdown-list__link--download">Лаунчер</a>
-					</li>
-				</ul>
-			</li>
-			<li class="hassubmenu nav__item ">
-				<a href="https://files2.gta-samp.com/SAMP_Addon_2.6.exe" class="nav__link nav__link--drop"><span>SAMP Addon</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list dropdown-list--mob">
+              <li class="dropdown-list__item mobile-back">
+                <a href="" class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item">
+                <a href="https://files2.gta-samp.com/SAMPLauncher.exe"
+                  class="dropdown-list__link dropdown-list__link--download">Лаунчер</a>
+              </li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item ">
+            <a href="https://files2.gta-samp.com/SAMP_Addon_2.6.exe" class="nav__link nav__link--drop"><span>SAMP
+                Addon</span></a>
 
-				<ul class="nav__list nav__list--dropdown dropdown-list">
-					<li class="dropdown-list__item mobile-back"><a href="" class="dropdown-list__link mobile-back__link">Назад</a>
-					</li>
-					<li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SAMP_Addon_2.6.exe"
-							class="dropdown-list__link dropdown-list__link--download">Скачать</a></li>
-					<li class="dropdown-list__item"><a href="./sampaddon"
-							class="dropdown-list__link dropdown-list__link--desc">Описание</a></li>
-				</ul>
-			</li>
-			<li class="hassubmenu nav__item">
-				<a href="/loading" class="nav__link nav__link--drop">
-					<span>Скачать</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SAMP_Addon_2.6.exe"
+                  class="dropdown-list__link dropdown-list__link--download">Скачать</a></li>
+              <li class="dropdown-list__item"><a href="./sampaddon"
+                  class="dropdown-list__link dropdown-list__link--desc">Описание</a></li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="/loading" class="nav__link nav__link--drop">
+              <span>Скачать</span></a>
 
-					<ul class="nav__list nav__list--dropdown dropdown-list">
-						<li class="dropdown-list__item mobile-back"><a href="" class="dropdown-list__link mobile-back__link">Назад</a>
-						</li>
-						<li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SAMPLauncher.exe"
-								class="dropdown-list__link dropdown-list__link--download">Лаунчер</a></li><li class="dropdown-list__item"><a href="/gta" class="dropdown-list__link dropdown-list__link--gta">GTA
-									SA</a>
-								<ul class="">
-									<li class="dropdown-list__item--d"><a href="https://files2.gta-samp.com/GTASanAndreasSetup.torrent"
-											class="dropdown-list__link--d">Скачать</a></li>
-									<li class="dropdown-list__item--d"><a href="/gta" class="dropdown-list__link--d">Описание</a>
-									</li>
-								</ul>
-							</li><li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SA-MP_0.3DL.exe"
-								class="dropdown-list__link dropdown-list__link--samp">SAMP
-								0.3DL</a>
-							<ul class="">
-								<li class="dropdown-list__item--d"><a href="https://files2.gta-samp.com/SA-MP_0.3DL.exe"
-										class="dropdown-list__link--d">Скачать</a></li>
-								<li class="dropdown-list__item--d"><a href="/samp" class="dropdown-list__link--d">Описание</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown-list__item"><a href="/mods"
-								class="dropdown-list__link dropdown-list__link--mode">Модификации, оружие, скины</a></li>
-						<li class="dropdown-list__item"><a href="/cars"
-								class="dropdown-list__link dropdown-list__link--transport">Транспорт</a></li>
-						<li class="dropdown-list__item"><a href="/speedometers"
-								class="dropdown-list__link dropdown-list__link--speed">Спидометры</a></li>
-						<li class="dropdown-list__item"><a href="/soft"
-								class="dropdown-list__link dropdown-list__link--program">Программы</a></li><li class="dropdown-list__item"><a href="/games"
-									class="dropdown-list__link dropdown-list__link--games">Игры</a></li></ul>
-			</li>
-			<li class="hassubmenu nav__item">
-				<a href="/info" class="nav__link nav__link--drop">
-					<span>Помощь</span></a>
-				<ul class="nav__list nav__list--dropdown dropdown-list">
-					<li class="dropdown-list__item mobile-back"><a href="" class="dropdown-list__link mobile-back__link">Назад</a>
-					</li>
-					<li class="dropdown-list__item"><a href="/faq"
-							class="dropdown-list__link dropdown-list__link--help">Решение проблем</a></li>
-					<li class="dropdown-list__item"><a href="/colors"
-							class="dropdown-list__link dropdown-list__link--color">Палитра
-							цветов</a></li>
-					<li class="dropdown-list__item"><a href="/rules"
-							class="dropdown-list__link dropdown-list__link--rules">Правила
-							RP и DM</a></li>
-					<li class="dropdown-list__item"><a href="/news"
-							class="dropdown-list__link dropdown-list__link--new">Новости</a></li>
-				</ul>
-			</li>
-			<li class="hassubmenu nav__item">
-				<a href="/servers" class="nav__link nav__link--drop">
-					<span>Сервера</span></a>
-				<ul class="nav__list nav__list--dropdown dropdown-list">
-					<li class="dropdown-list__item mobile-back"><a href="" class="dropdown-list__link mobile-back__link">Назад</a>
-					</li>
-					<li class="dropdown-list__item"><a href="/server-platinum"
-							class="dropdown-list__link dropdown-list__link--plat">Платинум</a></li>
-					<li class="dropdown-list__item"><a href="/server-titanium"
-							class="dropdown-list__link dropdown-list__link--tit">Титаниум</a></li>
-					<li class="dropdown-list__item"><a href="/server-chromium"
-							class="dropdown-list__link dropdown-list__link--chrom">Хромиум</a></li>
-					<li class="dropdown-list__item"><a href="/server-aurum"
-							class="dropdown-list__link dropdown-list__link--aur">Аурум</a>
-					</li>
-					<li class="dropdown-list__item"><a href="/server-litium"
-							class="dropdown-list__link dropdown-list__link--lit">Литиум</a>
-					</li>
-					<li class="dropdown-list__item"><a href="/server-deathmatch"
-							class="dropdown-list__link dropdown-list__link--dea">Death
-							Match</a></li>
-				</ul>
-			</li>
-			<li class="nav__item-f">
-				<a href="/forum" target="_blank" class="nav__link">Форум</a>
-			</li>
-			<li class="nav__item-f">
-				<a href="/donat" class="nav__link nav__link--color nav__donat">Магазин</a>
-			</li>
-		</ul>
-	</nav>
-	
-			<button class="burger" aria-label="Открыть меню">
-				<picture>
-					<source media="(max-width: 468px)" srcset="./img/menu.png">
-					<img src="./img/menutext.png" alt="Absolut">
-				</picture>
-			</button>
-		</div>
-	</header>
-	<section class="intro">
-		<div class="container intro__container">
-			<div class="intro-left"><h1 class="intro__title">Играй в GTA <br> San Andreas по сети</h1><span class="intro__online">1 798 играют прямо сейчас</span>
-				<div class="intro-left__desc">
-					<a href="https://files2.gta-samp.com/SAMPLauncher.exe" id="play" class="intro__btn">Начать играть</a>
-				</div>
-			</div>
-			<div class="intro-right">
-				<div class="box-switch btn-toggle">
-					<div class="switch"></div>
-				</div>
-				<script>
-					const btntheme=document.querySelector(".btn-toggle");
-					if(btntheme) btntheme.addEventListener("click",function()
-					{
-						const theme=localStorage.getItem("theme");
-						if(theme==="dark") SetLightTheme(1);
-						else if(theme==="light") SetDarkTheme(1);
-					});
-				</script>
-				<div class="intro-right__photo">
-					<img src="./img/index/pers11.png" alt="pers" onmousedown="return false;" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;">
-				</div>
-				<a href="https://vk.com/gtasamp" target="_blank" class="intro-right__link">
-					<img src="./img/index/vk.png" alt="вконтакте"></a>
-			</div>
-		</div>
-	</section>
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SAMPLauncher.exe"
+                  class="dropdown-list__link dropdown-list__link--download">Лаунчер</a></li>
+              <li class="dropdown-list__item"><a href="/gta" class="dropdown-list__link dropdown-list__link--gta">GTA
+                  SA</a>
+                <ul class="">
+                  <li class="dropdown-list__item--d"><a href="https://files2.gta-samp.com/GTASanAndreasSetup.torrent"
+                      class="dropdown-list__link--d">Скачать</a></li>
+                  <li class="dropdown-list__item--d"><a href="/gta" class="dropdown-list__link--d">Описание</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-list__item"><a href="https://files2.gta-samp.com/SA-MP_0.3DL.exe"
+                  class="dropdown-list__link dropdown-list__link--samp">SAMP
+                  0.3DL</a>
+                <ul class="">
+                  <li class="dropdown-list__item--d"><a href="https://files2.gta-samp.com/SA-MP_0.3DL.exe"
+                      class="dropdown-list__link--d">Скачать</a></li>
+                  <li class="dropdown-list__item--d"><a href="/samp" class="dropdown-list__link--d">Описание</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown-list__item"><a href="/mods"
+                  class="dropdown-list__link dropdown-list__link--mode">Модификации, оружие, скины</a></li>
+              <li class="dropdown-list__item"><a href="/cars"
+                  class="dropdown-list__link dropdown-list__link--transport">Транспорт</a></li>
+              <li class="dropdown-list__item"><a href="/speedometers"
+                  class="dropdown-list__link dropdown-list__link--speed">Спидометры</a></li>
+              <li class="dropdown-list__item"><a href="/soft"
+                  class="dropdown-list__link dropdown-list__link--program">Программы</a></li>
+              <li class="dropdown-list__item"><a href="/games"
+                  class="dropdown-list__link dropdown-list__link--games">Игры</a></li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="/info" class="nav__link nav__link--drop">
+              <span>Помощь</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item"><a href="/faq"
+                  class="dropdown-list__link dropdown-list__link--help">Решение проблем</a></li>
+              <li class="dropdown-list__item"><a href="/colors"
+                  class="dropdown-list__link dropdown-list__link--color">Палитра
+                  цветов</a></li>
+              <li class="dropdown-list__item"><a href="/rules"
+                  class="dropdown-list__link dropdown-list__link--rules">Правила
+                  RP и DM</a></li>
+              <li class="dropdown-list__item"><a href="/news"
+                  class="dropdown-list__link dropdown-list__link--new">Новости</a></li>
+            </ul>
+          </li>
+          <li class="hassubmenu nav__item">
+            <a href="/servers" class="nav__link nav__link--drop">
+              <span>Сервера</span></a>
+            <ul class="nav__list nav__list--dropdown dropdown-list" id="containerM">
+              <li class="dropdown-list__item mobile-back"><a href=""
+                  class="dropdown-list__link mobile-back__link">Назад</a>
+              </li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-platinum"
+                  class="dropdown-list__link dropdown-list__link--plat">Платинум</a>
+                <span class="handleM handlehiddenM">+</span></li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-titanium"
+                  class="dropdown-list__link dropdown-list__link--tit">Титаниум</a>
+                <span class="handleM handlehiddenM">+</span></li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-chromium"
+                  class="dropdown-list__link dropdown-list__link--chrom">Хромиум</a>
+                <span class="handleM handlehiddenM">+</span></li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-aurum"
+                  class="dropdown-list__link dropdown-list__link--aur">Аурум</a>
+                <span class="handleM handlehiddenM">+</span>
+              </li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-litium"
+                  class="dropdown-list__link dropdown-list__link--lit">Литиум</a>
+                <span class="handleM handlehiddenM">+</span>
+              </li>
+              <li class="dropdown-list__item dropdown-list__dnd" draggable="true"><a href="/server-deathmatch"
+                  class="dropdown-list__link dropdown-list__link--dea">Death
+                  Match</a>
+                <span class="handleM handlehiddenM">+</span></li>
+            </ul>
+          </li>
+          <li class="nav__item-f">
+            <a href="/forum" target="_blank" class="nav__link">Форум</a>
+          </li>
+          <li class="nav__item-f">
+            <a href="/donat" class="nav__link nav__link--color nav__donat">Магазин</a>
+          </li>
+        </ul>
+      </nav>
 
-	<section class="index-server" hidden>
-		<div class="container">
-			<div class="index-server__list" id="container">
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc ti" data-thickness="13" data-value="0.267">
-						<div class="index-server__desc">
-							<a href="server-titanium" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-3.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-titanium">
-									<h2 class="index-server__title">Титаниум</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('titanium')" onmouseover="onservermouseover('titanium')" id="titanium" class="index-server__ip">193.84.90.23:7772</button>
-									<button onclick="copytext('titanium')" id="tooltip-titanium" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc ay" data-thickness="13" data-value="0.163">
-						<div class="index-server__desc">
-							<a href="server-aurum" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-4.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-aurum">
-									<h2 class="index-server__title">Аурум</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('aurum')" onmouseover="onservermouseover('aurum')" id="aurum" class="index-server__ip">193.84.90.23:7774</button>
-									<button onclick="copytext('aurum')" id="tooltip-aurum" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc li" data-thickness="13" data-value="0.135">
-						<div class="index-server__desc">
-							<a href="server-litium" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-5.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-litium">
-									<h2 class="index-server__title">Литиум</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('litium')" onmouseover="onservermouseover('litium')" id="litium" class="index-server__ip">193.84.90.23:7775</button>
-									<button onclick="copytext('litium')" id="tooltip-litium" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc chr" data-thickness="13" data-value="0.266">
-						<div class="index-server__desc">
-							<a href="server-chromium" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-2.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-chromium">
-									<h2 class="index-server__title">Хромиум</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('chromium')" onmouseover="onservermouseover('chromium')" id="chromium" class="index-server__ip">193.84.90.23:7773</button>
-									<button onclick="copytext('chromium')" id="tooltip-chromium" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc de" data-thickness="13" data-value="0.084">
-						<div class="index-server__desc">
-							<a href="server-deathmatch" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-6.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-deathmatch">
-									<h2 class="index-server__title">Death Match</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('deathmatch')" onmouseover="onservermouseover('deathmatch')" id="deathmatch" class="index-server__ip">193.84.90.23:7777</button>
-									<button onclick="copytext('deathmatch')" id="tooltip-deathmatch" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-server__item" draggable="true">
-					<span class="handle handlehidden">+</span>
-					<div class="oc pl" data-thickness="13" data-value="0.883">
-						<div class="index-server__desc">
-							<a href="server-platinum" class="index-server__img-link">
-								<img class="index-server__img" src="./img/index/server/ser-1.svg" alt="">
-							</a>
-							<div class="index-0">
-								<a href="server-platinum">
-									<h2 class="index-server__title">Платинум</h2>
-								</a>
-								<span class="index-server__text">Онлайн
-									<strong class="index-server__sum"></strong>
-									<span> из 1000</span>
-								</span>
-								<div class="index-server__tooltip">
-									<button onclick="copytext('platinum')" onmouseover="onservermouseover('platinum')" id="platinum" class="index-server__ip">193.84.90.23:7771</button>
-									<button onclick="copytext('platinum')" id="tooltip-platinum" class="tooltip-text">Скопировать</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<script>
-	let items=document.getElementsByClassName("index-server__item");
-	let storage=window.localStorage.getItem("key123456789");
-	if(items) if(storage) 
-	{
-		let split=storage.split("|");
-		if(split.length==6) for(let i=0;i<split.length;i++) if(i<items.length) items[i].innerHTML=split[i];
-		
-		items=document.getElementsByClassName("handle");
-		if(items) for(let i=0;i<items.length;i++) items[i].classList.add("handlehidden");
-		
-		let item=document.getElementsByClassName("oc pl");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.883");
-		item=document.getElementsByClassName("oc de");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.084");
-		item=document.getElementsByClassName("oc ti");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.267");
-		item=document.getElementsByClassName("oc chr");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.266");
-		item=document.getElementsByClassName("oc ay");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.163");
-		item=document.getElementsByClassName("oc li");
-		if(item) if(item[0]) item[0].setAttribute("data-value","0.135");
-	}
-	let section=document.getElementsByClassName("index-server");
-	if(section) section[0].hidden=false;
-	</script>
+      <button class="burger" aria-label="Открыть меню">
+        <picture>
+          <source media="(max-width: 468px)" srcset="./img/menu.png">
+          <img src="./img/menutext.png" alt="Absolut">
+        </picture>
+      </button>
+    </div>
+  </header>
+  <section class="intro">
+    <div class="container intro__container">
+      <div class="intro-left">
+        <h1 class="intro__title">Играй в GTA <br> San Andreas по сети</h1><span class="intro__online">1 969 играют прямо
+          сейчас</span>
+        <div class="intro-left__desc">
+          <a href="https://files2.gta-samp.com/SAMPLauncher.exe" id="play" class="intro__btn">Начать играть</a>
+        </div>
+      </div>
+      <div class="intro-right">
+        <div class="box-switch btn-toggle">
+          <div class="switch"></div>
+        </div>
+        <script>
+          const btntheme = document.querySelector(".btn-toggle");
+          if (btntheme) btntheme.addEventListener("click", function () {
+            const theme = localStorage.getItem("theme");
+            if (theme === "dark") SetLightTheme(1);
+            else if (theme === "light") SetDarkTheme(1);
+          });
+        </script>
+        <div class="intro-right__photo">
+          <img src="./img/index/pers1.png" alt="pers" onmousedown="return false;"
+            style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none;">
+        </div>
+        <a href="https://vk.com/gtasamp" target="_blank" class="intro-right__link">
+          <img src="./img/index/vk.png" alt="вконтакте"></a>
+      </div>
+    </div>
+  </section>
 
-	<!-- <p>
+  <section class="index-server" hidden>
+    <div class="container">
+      <div class="index-server__list" id="container">
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc ti" data-thickness="13" data-value="0.261">
+            <div class="index-server__desc">
+              <a href="server-titanium" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-3.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-titanium">
+                  <h2 class="index-server__title">Титаниум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('titanium')" onmouseover="onservermouseover('titanium')" id="titanium"
+                    class="index-server__ip">193.84.90.23:7772</button>
+                  <button onclick="copytext('titanium')" id="tooltip-titanium" class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc ay" data-thickness="13" data-value="0.191">
+            <div class="index-server__desc">
+              <a href="server-aurum" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-4.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-aurum">
+                  <h2 class="index-server__title">Аурум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('aurum')" onmouseover="onservermouseover('aurum')" id="aurum"
+                    class="index-server__ip">193.84.90.23:7774</button>
+                  <button onclick="copytext('aurum')" id="tooltip-aurum" class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc li" data-thickness="13" data-value="0.183">
+            <div class="index-server__desc">
+              <a href="server-litium" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-5.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-litium">
+                  <h2 class="index-server__title">Литиум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('litium')" onmouseover="onservermouseover('litium')" id="litium"
+                    class="index-server__ip">193.84.90.23:7775</button>
+                  <button onclick="copytext('litium')" id="tooltip-litium" class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc chr" data-thickness="13" data-value="0.31">
+            <div class="index-server__desc">
+              <a href="server-chromium" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-2.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-chromium">
+                  <h2 class="index-server__title">Хромиум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('chromium')" onmouseover="onservermouseover('chromium')" id="chromium"
+                    class="index-server__ip">193.84.90.23:7773</button>
+                  <button onclick="copytext('chromium')" id="tooltip-chromium" class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc de" data-thickness="13" data-value="0.099">
+            <div class="index-server__desc">
+              <a href="server-deathmatch" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-6.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-deathmatch">
+                  <h2 class="index-server__title">Death Match</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('deathmatch')" onmouseover="onservermouseover('deathmatch')" id="deathmatch"
+                    class="index-server__ip">193.84.90.23:7777</button>
+                  <button onclick="copytext('deathmatch')" id="tooltip-deathmatch"
+                    class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-server__item" draggable="true">
+          <span class="handle handlehidden">+</span>
+          <div class="oc pl" data-thickness="13" data-value="0.925">
+            <div class="index-server__desc">
+              <a href="server-platinum" class="index-server__img-link">
+                <img class="index-server__img" src="./img/index/server/ser-1.svg" alt="">
+              </a>
+              <div class="index-0">
+                <a href="server-platinum">
+                  <h2 class="index-server__title">Платинум</h2>
+                </a>
+                <span class="index-server__text">Онлайн
+                  <strong class="index-server__sum"></strong>
+                  <span> из 1000</span>
+                </span>
+                <div class="index-server__tooltip">
+                  <button onclick="copytext('platinum')" onmouseover="onservermouseover('platinum')" id="platinum"
+                    class="index-server__ip">193.84.90.23:7771</button>
+                  <button onclick="copytext('platinum')" id="tooltip-platinum" class="tooltip-text">Скопировать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    let items = document.getElementsByClassName("index-server__item");
+    let storage = window.localStorage.getItem("key123456789");
+    if (items)
+      if (storage) {
+        let split = storage.split("|");
+        if (split.length == 6)
+          for (let i = 0; i < split.length; i++)
+            if (i < items.length) items[i].innerHTML = split[i];
+
+        items = document.getElementsByClassName("handle");
+        if (items)
+          for (let i = 0; i < items.length; i++) items[i].classList.add("handlehidden");
+
+        let item = document.getElementsByClassName("oc pl");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.925");
+        item = document.getElementsByClassName("oc de");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.099");
+        item = document.getElementsByClassName("oc ti");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.261");
+        item = document.getElementsByClassName("oc chr");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.31");
+        item = document.getElementsByClassName("oc ay");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.191");
+        item = document.getElementsByClassName("oc li");
+        if (item)
+          if (item[0]) item[0].setAttribute("data-value", "0.183");
+      }
+    let section = document.getElementsByClassName("index-server");
+    if (section) section[0].hidden = false;
+  </script>
+
+  <!-- <p>
 		Ширина экрана -
 		<b id="monitor-width"></b> px
 	</p>
@@ -386,213 +418,246 @@
 		<b id="brows-height"></b> px
 	</p> -->
 
-	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
-	<script src="libs/progressbarJS/circle-progress.min.js"></script>
-	<script src="libs/izotope/izotope.min.js"></script>
-	<script src="libs/MixItUp/jquery.mixitup.min.js"></script>
-	<script src="libs/deviceJS/device.min.js"></script>
-	
-	<script src="js/menu.js"></script>
-	<script src="libs/dragula/dragula.min.js"></script>
-	<script src="js/script.js"></script>
+  <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+  <script src="libs/progressbarJS/circle-progress.min.js"></script>
+  <script src="libs/izotope/izotope.min.js"></script>
+  <script src="libs/MixItUp/jquery.mixitup.min.js"></script>
+  <script src="libs/deviceJS/device.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="libs/dragula/dragula.min.js"></script>
+  <script src="js/script.js"></script>
 
-	<script>
-	//drag and drop
-	let opDnD=
-	{
-		buff:null,
-		items:document.getElementsByClassName("index-server__item"),
-		events:
-		{
-			beforeunload:()=>
-			{
-				let items=document.getElementsByClassName("handle");
-				if(items) for(let i=0;i<items.length;i++) items[i].classList.add("handlehidden");
-				window.localStorage.setItem
-				(
-					"key123456789",
-					Array.from(opDnD.items,(elem)=>elem.innerHTML).join("|")
-				);
-			},
-			dragstart:(e)=>
-			{
-				opDnD.buff=e.currentTarget;
-				e.dataTransfer.effectAllowed="move";
-				e.dataTransfer.setData("text/html",e.currentTarget.innerHTML);
-			},
-			dragover:(e)=>
-			{
-				e.preventDefault();
-				e.dataTransfer.dropEffect="move";
-			},
-			drop:(e)=>
-			{
-				opDnD.buff.innerHTML=e.currentTarget.innerHTML;
-				e.currentTarget.innerHTML=e.dataTransfer.getData("text/html");
-				let animate=false;
-				canvas(animate);
-			},
-		},
-	};
-	//console.log(Array.from(opDnD.items,elem=>elem.innerHTML).join(";"));
-	["beforeunload","load"].forEach((evt)=>window.addEventListener(evt,opDnD.events[evt]));
-	Array.from(opDnD.items,(elem)=>{["dragstart","dragover","drop"].forEach((evt)=>elem.addEventListener(evt,opDnD.events[evt]));});
+  <script>
+    //drag and drop
+    let opDnD = {
+      buff: null,
+      items: document.getElementsByClassName("index-server__item"),
+      events: {
+        beforeunload: () => {
+          let items = document.getElementsByClassName("handle");
+          if (items)
+            for (let i = 0; i < items.length; i++) items[i].classList.add("handlehidden");
+          window.localStorage.setItem(
+            "key123456789",
+            Array.from(opDnD.items, (elem) => elem.innerHTML).join("|")
+          );
+        },
+        dragstart: (e) => {
+          opDnD.buff = e.currentTarget;
+          e.dataTransfer.effectAllowed = "move";
+          e.dataTransfer.setData("text/html", e.currentTarget.innerHTML);
+        },
+        dragover: (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = "move";
+        },
+        drop: (e) => {
+          opDnD.buff.innerHTML = e.currentTarget.innerHTML;
+          e.currentTarget.innerHTML = e.dataTransfer.getData("text/html");
+          let animate = false;
+          canvas(animate);
+        },
+      },
+    };
+    //console.log(Array.from(opDnD.items,elem=>elem.innerHTML).join(";"));
+    ["beforeunload", "load"].forEach((evt) => window.addEventListener(evt, opDnD.events[evt]));
+    Array.from(opDnD.items, (elem) => {
+      ["dragstart", "dragover", "drop"].forEach((evt) => elem.addEventListener(evt, opDnD.events[evt]));
+    });
 
-  let opDnDD=
-	{
-		buff:null,
-		items:document.getElementsByClassName("dropdown-list__item"),
-		events:
-		{
-			beforeunload:()=>
-			{
-				let items=document.getElementsByClassName("handle");
-				if(items) for(let i=0;i<items.length;i++) items[i].classList.add("handlehidden");
-				window.localStorage.setItem
-				(
-					"key123",
-					Array.from(opDnDD.items,(elem)=>elem.innerHTML).join("|")
-				);
-			},
-			dragstart:(e)=>
-			{
-				opDnDD.buff=e.currentTarget;
-				e.dataTransfer.effectAllowed="move";
-				e.dataTransfer.setData("text/html",e.currentTarget.innerHTML);
-			},
-			dragover:(e)=>
-			{
-				e.preventDefault();
-				e.dataTransfer.dropEffect="move";
-			},
-			drop:(e)=>
-			{
-				opDnDD.buff.innerHTML=e.currentTarget.innerHTML;
-				e.currentTarget.innerHTML=e.dataTransfer.getData("text/html");
-				let animate=false;
-				canvas(animate);
-			},
-		},
-	};
-	//console.log(Array.from(opDnD.items,elem=>elem.innerHTML).join(";"));
-	["beforeunload","load"].forEach((evt)=>window.addEventListener(evt,opDnDD.events[evt]));
-	Array.from(opDnDD.items,(elem)=>{["dragstart","dragover","drop"].forEach((evt)=>elem.addEventListener(evt,opDnDD.events[evt]));});
+    var container = document.getElementById("container");
+    if (container) {
+      var rows = container.children;
+      var sortableTable = dragula([container], {
+        moves: function (el, containerr, handle) {
+          return handle.classList.contains("handle");
+        },
+      });
+    }
+    var itemhandle;
+    document.addEventListener("touchend", function (e) {
+      let items = document.getElementsByClassName("handle");
+      if (items)
+        for (let i = 0; i < items.length; i++) items[i].classList.add("handlehidden");
+      window.localStorage.setItem(
+        "key123456789",
+        Array.from(opDnD.items, (elem) => elem.innerHTML).join("|")
+      );
+      if (itemhandle) {
+        itemhandle.classList.remove("handlehidden");
+        itemhandle = 0;
+      }
+    });
 
-	var container=document.getElementById("container");
-	if(container)
-	{
-		var rows=container.children;
-		var sortableTable=dragula([container],{moves: function (el,containerr,handle) {return handle.classList.contains("handle");},});
-	}
-	var itemhandle;
-	function ServerItem(target)
-	{
-		if(target) if(target.className=="index-server__item")
-		{
-			var handle=target.children[0];
-			if(handle) if(handle.classList.contains("handle"))
-			{
-				handle.classList.remove("handlehidden");
-				itemhandle=handle;
-			}
-		}
-	}
-	document.addEventListener("touchstart",function(e)
-	{
-		if(e) if(e.touches[0]) if(e.touches[0].target)
-		{
-			if(itemhandle)
-			{
-				itemhandle.classList.add("handlehidden");
-				itemhandle=0;
-			}
-			var target=e.touches[0].target;
-			if(target.className=="index-server__item") ServerItem(target);
-			else if(target.className=="index-server__ip")
-			{
-				var element=target;
-				for(var i=0;i<5;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__desc")
-			{
-				var element=target;
-				for(var i=0;i<2;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__img-link")
-			{
-				var element=target;
-				for(var i=0;i<3;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__img")
-			{
-				var element=target;
-				for(var i=0;i<4;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-		}
-	});
+    function ServerItem(target) {
+      if (target)
+        if (target.className == "index-server__item") {
+          var handle = target.children[0];
+          if (handle)
+            if (handle.classList.contains("handle")) {
+              handle.classList.remove("handlehidden");
+              itemhandle = handle;
+            }
+        }
+    }
+    document.addEventListener("touchstart", function (e) {
+      if (e)
+        if (e.touches[0])
+          if (e.touches[0].target) {
+            if (itemhandle) {
+              itemhandle.classList.add("handlehidden");
+              itemhandle = 0;
+            }
+            var target = e.touches[0].target;
+            if (target.className == "index-server__item") ServerItem(target);
+            else if (target.className == "index-server__ip") {
+              var element = target;
+              for (var i = 0; i < 5; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "index-server__desc") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "index-server__img-link") {
+              var element = target;
+              for (var i = 0; i < 3; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "index-server__img") {
+              var element = target;
+              for (var i = 0; i < 4; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "index-server__title") {
+              var element = target;
+              for (var i = 0; i < 5; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            }
+          }
+    });
+  </script>
+  <script>
+    if (device.mobile() || device.tablet())
+      if (document.getElementById('play')) document.getElementById('play').href = "./play";
+  </script>
+  <script>
+    let opDnDm = {
+      buff: null,
+      items: document.getElementsByClassName("dropdown-list__dnd"),
+      events: {
+        beforeunload: () => {
+          let items = document.getElementsByClassName("handleM");
+          if (items)
+            for (let i = 0; i < items.length; i++) items[i].classList.add("handlehiddenM");
+          window.localStorage.setItem(
+            "key",
+            Array.from(opDnDmm.items, (elem) => elem.innerHTML).join("|")
+          );
+        },
+        dragstart: (e) => {
+          opDnDm.buff = e.currentTarget;
+          e.dataTransfer.effectAllowed = "move";
+          e.dataTransfer.setData("text/html", e.currentTarget.innerHTML);
+        },
+        dragover: (e) => {
+          e.preventDefault();
+          e.dataTransfer.dropEffect = "move";
+        },
+        drop: (e) => {
+          opDnDm.buff.innerHTML = e.currentTarget.innerHTML;
+          e.currentTarget.innerHTML = e.dataTransfer.getData("text/html");
+          
+        },
+      },
+    };
+    //console.log(Array.from(opDnDm.items,elem=>elem.innerHTML).join(";"));
+    ["beforeunload", "load"].forEach((evt) => window.addEventListener(evt, opDnDm.events[evt]));
+    Array.from(opDnDm.items, (elem) => {
+      ["dragstart", "dragover", "drop"].forEach((evt) => elem.addEventListener(evt, opDnDm.events[evt]));
+    });
 
+    var containerM = document.getElementById("containerM");
+    if (containerM) {
+      var rows = containerM.children;
+      var sortableTableM = dragula([containerM], {
+        moves: function (el, containerM, handle) {
+          return handle.classList.contains("handleM");
+        },
+      });
+    }
+    var itemhandleM;
+    document.addEventListener("touchend", function (e) {
+      let items = document.getElementsByClassName("handleM");
+      if (items)
+        for (let i = 0; i < items.length; i++) items[i].classList.add("handlehiddenM");
+      window.localStorage.setItem(
+        "key",
+        Array.from(opDnDm.items, (elem) => elem.innerHTML).join("|")
+      );
+      if (itemhandleM) {
+        itemhandleM.classList.remove("handlehiddenM");
+        itemhandleM = 0;
+      }
+    });
 
-  var nav=document.getElementById("nav");
-	if(nav)
-	{
-		var rows=nav.children;
-		var sortableTable=dragula([nav],{moves: function (el,handle) {return handle.classList.contains("handle");},});
-	}
-	var itemhandleNav;
-	function ServerItem(target)
-	{
-		if(target) if(target.className=="dropdown-list__item")
-		{
-			var handle=target.children[0];
-			if(handle) if(handle.classList.contains("handle"))
-			{
-				handle.classList.remove("handlehidden");
-				itemhandleNav=handle;
-			}
-		}
-	}
-	document.addEventListener("touchstart",function(e)
-	{
-		if(e) if(e.touches[0]) if(e.touches[0].target)
-		{
-			if(itemhandleNav)
-			{
-				itemhandleNav.classList.add("handlehidden");
-				itemhandleNav=0;
-			}
-			var target=e.touches[0].target;
-			if(target.className=="index-server__item") ServerItem(target);
-			else if(target.className=="index-server__ip")
-			{
-				var element=target;
-				for(var i=0;i<5;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__desc")
-			{
-				var element=target;
-				for(var i=0;i<2;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__img-link")
-			{
-				var element=target;
-				for(var i=0;i<3;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-			else if(target.className=="index-server__img")
-			{
-				var element=target;
-				for(var i=0;i<4;i++) if(element) element=element.parentElement;
-				ServerItem(element);
-			}
-		}
-	});
-	</script>
-	<script>if(device.mobile() || device.tablet()) if(document.getElementById('play')) document.getElementById('play').href="./play";</script></body>
+    function ServerItem(target) {
+      if (target)
+        if (target.className == "dropdown-list__dnd") {
+          var handle = target.children[0];
+          if (handle)
+            if (handle.classList.contains("handleM")) {
+              handle.classList.remove("handlehiddenM");
+              itemhandleM = handle;
+            }
+        }
+    }
+    document.addEventListener("touchstart", function (e) {
+      if (e)
+        if (e.touches[0])
+          if (e.touches[0].target) {
+            if (itemhandleM) {
+              itemhandleM.classList.add("handlehiddenM");
+              itemhandleM = 0;
+            }
+            var target = e.touches[0].target;
+            if (target.className == "dropdown-list__dnd") ServerItem(target);
+            else if (target.className == "dropdown-list__link--chrom") {
+              var element = target;
+              for (var i = 0; i < 5; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "dropdown-list__link--plat") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "dropdown-list__link--tit") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "dropdown-list__link--aur") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "dropdown-list__link--lit") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            } else if (target.className == "dropdown-list__link--dea") {
+              var element = target;
+              for (var i = 0; i < 2; i++)
+                if (element) element = element.parentElement;
+              ServerItem(element);
+            }    
+          }
+    });
+  </script>
+</body>
 
 </html>
