@@ -554,7 +554,7 @@
             for (let i = 0; i < items.length; i++) items[i].classList.add("handlehiddenM");
           window.localStorage.setItem(
             "key",
-            Array.from(opDnDmm.items, (elem) => elem.innerHTML).join("|")
+            Array.from(opDnDm.items, (elem) => elem.innerHTML).join("|")
           );
         },
         dragstart: (e) => {
@@ -656,6 +656,7 @@
               ServerItem(element);
             }    
           }
+          
     });
   </script>
 </body>
