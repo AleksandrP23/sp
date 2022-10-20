@@ -1,0 +1,54 @@
+<!-- <svg width="146" height="146" viewBox="0 0 146 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter0_b_229_2379)">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M73 127.75C103.238 127.75 127.75 103.238 127.75 73C127.75 42.7624 103.238 18.25 73 18.25C42.7624 18.25 18.25 42.7624 18.25 73C18.25 103.238 42.7624 127.75 73 127.75ZM56.5328 43.5738L107.927 72.1258C108.612 72.5068 108.612 73.4931 107.927 73.8742L56.5328 102.426C55.7329 102.871 54.75 102.292 54.75 101.377V44.6227C54.75 43.7078 55.7329 43.1294 56.5328 43.5738Z"
+      fill="#B3B3B3" fill-opacity="0.12" />
+    <text class="link__text">
+      <textPath href="#link-circle" stroke="none">
+        Рассчитать стоимость
+      </textPath>
+    </text>
+  </g>
+  <defs>
+    <filter id="filter0_b_229_2379" x="-1.75" y="-1.75" width="149.5" height="149.5" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feGaussianBlur in="BackgroundImage" stdDeviation="10" />
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_229_2379" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_229_2379" result="shape" />
+    </filter>
+  </defs>
+</svg> -->
+
+
+<svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg"
+  aria-labelledby="link1-title link1-desc">
+
+  <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none"
+    fill="none" />
+  <g filter="url(#filter0_b_229_2379)">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M73 127.75C103.238 127.75 127.75 103.238 127.75 73C127.75 42.7624 103.238 18.25 73 18.25C42.7624 18.25 18.25 42.7624 18.25 73C18.25 103.238 42.7624 127.75 73 127.75ZM56.5328 43.5738L107.927 72.1258C108.612 72.5068 108.612 73.4931 107.927 73.8742L56.5328 102.426C55.7329 102.871 54.75 102.292 54.75 101.377V44.6227C54.75 43.7078 55.7329 43.1294 56.5328 43.5738Z"
+      fill="#B3B3B3" fill-opacity="0.12" />
+    <text class="link__text">
+      <textPath href="#link-circle" stroke="none">
+        Рассчитать стоимость
+      </textPath>
+    </text>
+  </g>
+
+  <text class="link__text">
+    <textPath href="#link-circle" stroke="none">
+      Рассчитать стоимость
+    </textPath>
+  </text>
+  <defs>
+    <filter id="filter0_b_229_2379" x="-1.75" y="-1.75" width="149.5" height="149.5" filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feGaussianBlur in="BackgroundImage" stdDeviation="10" />
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_229_2379" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_229_2379" result="shape" />
+    </filter>
+  </defs>
+</svg>

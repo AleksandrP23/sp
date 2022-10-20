@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Juicy</title>
+  <link rel="preload" href="fonts/RubikRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ErmilovBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+      <img loading="lazy" src="img/logo.svg" class="image" width="195" height="93" alt="Логотип Juicy">
+    </a>
+    <div class="header__wrapper-burger">
+      <nav class="nav" data-menu data-menu-overlay>
+        <div class="container nav__content">
+          <p class="nav__text">Меню</p>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Полировка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">химчистка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Автомойка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Нанесение покрытий</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Шумовиброизоляция</a>
+            </li>
+          </ul>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Перешивка салона</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Перетяжка руля</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Сигнализация</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Мультимедия</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">доводчики</a>
+            </li>
+          </ul>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">тонировка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Защитные плёнка для кузова</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Защитные плёнка для лобового стекла</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Керамика</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Жидкое стекло</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="container list-reset nav__bottom">
+          <li class="nav__item">
+            <a href="#" class="nav__link">о компании</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Полезная информация</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-reset burger burger__wrap" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+        <p class="header__menu-text">меню</p>
+      </button>
+    </div>
+    <div class="header__right">
+      <ul class="list-reset social header__social">
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--tg"
+            aria-label="Наш telegram">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#telegramm"></use>
+            </svg>
+          </a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--wa"
+            aria-label="Наш whatsapp">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#watsapp"></use>
+            </svg></a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--vb"
+            aria-label="Наш viber">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#viber"></use>
+            </svg></a></li>
+      </ul>
+      <a href="tel:89000000000" class="header__tel">8-900 000 00 00</a>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">Детейлинг вашего автомобиля</h1>
+    <button class="btn-reset hero__modal" data-graph-path="hero__modal">
+      <svg viewBox='0 0 200 200' width='200' height='200' xmlns='http://www.w3.org/2000/svg' class="link__svg"
+        aria-labelledby="link1-title link1-desc">
+
+        <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none"
+          fill="none" />
+
+        <path class="link__arrow" transform=translate(26,30) fill-rule="evenodd" clip-rule="evenodd"
+          d="M73 127.75C103.238 127.75 127.75 103.238 127.75 73C127.75 42.7624 103.238 18.25 73 18.25C42.7624 18.25 18.25 42.7624 18.25 73C18.25 103.238 42.7624 127.75 73 127.75ZM56.5328 43.5738L107.927 72.1258C108.612 72.5068 108.612 73.4931 107.927 73.8742L56.5328 102.426C55.7329 102.871 54.75 102.292 54.75 101.377V44.6227C54.75 43.7078 55.7329 43.1294 56.5328 43.5738Z"
+          fill="#B3B3B3" fill-opacity="0.12" />
+
+        <text class="link__text">
+          <textPath href="#link-circle" stroke="none">
+            Смотреть видеопрезентацию
+          </textPath>
+        </text>
+      </svg>
+    </button>
+    <div class="hero__image">
+      <picture>
+        <source srcset="img/hero-bg.avif" type="image/avif">
+        <source srcset="img/hero-bg.webp" type="image/webp">
+        <img loading="lazy" src="img/hero-bg.png" class="image" width="2387" height="774" alt="Lexus-LX-570">
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <section class="benefit">
+  <div class="container benefit__container">
+    <ul class="list-reset benefit__list">
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="services">
+  <div class="container">
+    <h2 class="services__title">Наши услуги</h2>
+    <ul class="list-reset services__list grid">
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Полировка</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-1.avif" type="image/avif">
+          <source srcset="img/service/service-1.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-1.png" class="services__item-image" width="456" height="474"
+            alt="Картинка полировки">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Химчистка</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-2.avif" type="image/avif">
+          <source srcset="img/service/service-2.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-2.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Химчистка">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Автомойка</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-3.avif" type="image/avif">
+          <source srcset="img/service/service-3.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-3.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Автомойка">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Нанесение покрытий</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-4.avif" type="image/avif">
+          <source srcset="img/service/service-4.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-4.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Нанесение покрытий">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Шумовиброизоляция</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-5.avif" type="image/avif">
+          <source srcset="img/service/service-5.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-5.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Шумовиброизоляция">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Перешивка салона</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-6.avif" type="image/avif">
+          <source srcset="img/service/service-6.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-6.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Перешивка салона">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Перетяжка руля</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-7.avif" type="image/avif">
+          <source srcset="img/service/service-7.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-7.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Перетяжка руля">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Сигнализация <span class="services__item-subtitle">продажа и
+              установка</span></h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-8.avif" type="image/avif">
+          <source srcset="img/service/service-8.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-8.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Сигнализация">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Мультимедия <span class="services__item-subtitle">продажа и
+              установка</span></h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-9.avif" type="image/avif">
+          <source srcset="img/service/service-9.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-9.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Мультимедия">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">доводчики <span class="services__item-subtitle">на двери и багажник</span>
+          </h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-10.avif" type="image/avif">
+          <source srcset="img/service/service-10.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-10.png" class="services__item-image" width="456" height="474"
+            alt="Картинка доводчики">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">тонировка</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-11.avif" type="image/avif">
+          <source srcset="img/service/service-11.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-11.png" class="services__item-image" width="456" height="474"
+            alt="Картинка тонировка">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Защитные плёнка <span class="services__item-subtitle">кузова</span></h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-12.avif" type="image/avif">
+          <source srcset="img/service/service-12.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-12.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Защитные плёнка">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Защитные плёнка <span class="services__item-subtitle">лобового окна</span>
+          </h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-13.avif" type="image/avif">
+          <source srcset="img/service/service-13.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-13.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Защитные плёнка">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Керамика</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-14.avif" type="image/avif">
+          <source srcset="img/service/service-14.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-14.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Керамика">
+        </picture>
+      </li>
+      <li class="services__item grid__item">
+        <a href="#" class="services__link">перейти к услуге</a>
+        <div class="services__item-descr">
+          <h3 class="services__item-title">Жидкое стекло</h3>
+          <p class="services__item-text">от 1000 рублей</p>
+        </div>
+        <picture>
+          <source srcset="img/service/service-15.avif" type="image/avif">
+          <source srcset="img/service/service-15.webp" type="image/webp">
+          <img loading="lazy" src="img/service/service-15.png" class="services__item-image" width="456" height="474"
+            alt="Картинка Жидкое стекло">
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="truck">
+  <div class="container truck__container">
+    <h2 class="truck__tilte">Эвакуатор НН</h2>
+    <div class="truck__descr">
+      <p class="truck__text">Равным образом, повышение уровня гражданского сознания выявляет срочную потребность направлений прогрессивного</p>
+      <a href="#" class="truck__link">Подробнее</a>
+    </div>
+    <picture>
+      <source srcset="img/truck.avif" type="image/avif">
+      <source srcset="img/truck.webp" type="image/webp">
+      <img loading="lazy" src="img/truck.png" class="truck__image" width="1145" height="550" alt="Эвакуатор">
+    </picture>
+  </div>
+</section>
+
+      <section class="map">
+  <div id="map" style="width: 100%; height: 910px"></div>
+  <div class="container">
+    <div class="map__wrapper">
+      <h2 class="map__title">контакты</h2>
+      <ul class="list-reset map__list">
+        <li class="map__item">
+          <h3 class="map__item-title">Адрес</h3>
+          <p class="map__item-text">Город, ул. уличная, 00, стр 1</p>
+        </li>
+        <li class="map__item">
+          <h3 class="map__item-title">График работы</h3>
+          <p class="map__item-text">09:00 — 21:00</p>
+        </li>
+        <li class="map__item">
+          <h3 class="map__item-title">телефон</h3>
+          <p class="map__item-text">8-900-000 00 00</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+      <section class="about">
+  <div class="container about__container">
+    <h2 class="about__title">о компании</h2>
+    <p class="about__text">Равным образом, повышение уровня гражданского сознания выявляет срочную потребность направлений прогрессивного развития. В рамках спецификации современных стандартов, сделанные на базе интернет-аналитики выводы, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Значимость этих проблем настолько очевидна, что синтетическое тестирование не даёт нам иного выбора, кроме определения экономической целесообразности принимаемых решений. Равным образом, повышение уровня гражданского сознания выявляет срочную потребность направлений прогрессивного развития.</p>
+    <p class="about__text">В рамках спецификации современных стандартов, сделанные на базе интернет-аналитики выводы, инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Значимость этих проблем настолько очевидна, что синтетическое тестирование не даёт нам иного выбора, кроме определения экономической целесообразности принимаемых решений.</p>
+    <div class="about__image">
+      <picture>
+        <source srcset="img/ab.avif" type="image/avif">
+        <source srcset="img/ab.webp" type="image/webp">
+        <img loading="lazy" src="img/ab.png" class="image" width="1917" height="838" alt="Lexus-LX-570">
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <section class="benefit">
+  <div class="container benefit__container">
+    <ul class="list-reset benefit__list">
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+      <li class="benefit__item">
+        <h2 class="benefit__title">преимущество 1</h2>
+        <p class="benefit__text">Lorem ipsum</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__top">
+      <a href="index.html" class="logo footer__logo">
+        <img loading="lazy" src="img/logo.svg" class="image" width="165" height="79" alt="Логотип Juicy">
+      </a>
+      <address class="footer__address">
+        <span class="footer__text">Адрес: Нижний новгород,</span>
+        <span class="footer__text">ул. уличная, 00, стр 1</span>
+        <button class="btn-reset footer__address-link" data-graph-path="footer__modal">показать на карте</button>
+      </address>
+      <div class="footer__hours ">
+        <p class="footer__text">пн — пт: 09:00 — 21:00</p>
+        <p class="footer__text">Сб — ВС: 09:00 — 18:00</p>
+      </div>
+      <div class="footer__cont">
+        <a href="tel:89000000000" class="footer__tel">8-900 000 00 00</a>
+        <ul class="list-reset social footer__social">
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--tg"
+              aria-label="Наш telegram">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#telegramm"></use>
+              </svg>
+            </a></li>
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--wa"
+              aria-label="Наш whatsapp">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#watsapp"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--vb"
+              aria-label="Наш viber">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#viber"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__bottom-link">Все права защищены © 2022</span>
+      <a href="#" class="footer__bottom-link">Публичная оферта</a>
+      <a href="#" class="footer__bottom-link">
+        <span class="footer__bottom-text">Разработка сайтов</span>
+        <svg class="footer__bottom-artix">
+          <use xlink:href="img/sprite.svg#artix"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="hero__modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="video-block">
+        <button class="btn-reset video-block__play" aria-label="Play video">
+          <svg>
+            <use xlink:href="img/sprite.svg#play"></use>
+          </svg>
+        </button>
+        <video class="video-block__content" src="context-video.mp4" muted loop preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="footer__modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div id="maps" class="footer__map" style="width: 100%; height: 300px"></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>Juicy</title>
+  <link rel="preload" href="fonts/RubikRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ErmilovBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="container header__container">
+    <a href="index.html" class="header__logo">
+      <img loading="lazy" src="img/logo.svg" class="image" width="195" height="93" alt="Логотип Juicy">
+    </a>
+    <div class="header__wrapper-burger">
+      <nav class="nav" data-menu data-menu-overlay>
+        <div class="container nav__content">
+          <p class="nav__text">Меню</p>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Полировка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">химчистка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Автомойка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Нанесение покрытий</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Шумовиброизоляция</a>
+            </li>
+          </ul>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Перешивка салона</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Перетяжка руля</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Сигнализация</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Мультимедия</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">доводчики</a>
+            </li>
+          </ul>
+          <ul class="list-reset nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">тонировка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Защитные плёнка для кузова</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Защитные плёнка для лобового стекла</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Керамика</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Жидкое стекло</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="container list-reset nav__bottom">
+          <li class="nav__item">
+            <a href="#" class="nav__link">о компании</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">контакты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Полезная информация</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-reset burger burger__wrap" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+        <p class="header__menu-text">меню</p>
+      </button>
+    </div>
+    <div class="header__right">
+      <ul class="list-reset social header__social">
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--tg"
+            aria-label="Наш telegram">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#telegramm"></use>
+            </svg>
+          </a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--wa"
+            aria-label="Наш whatsapp">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#watsapp"></use>
+            </svg></a></li>
+        <li class="social__item"><a href="#" target="_blank" class="social__link social__link--vb"
+            aria-label="Наш viber">
+            <svg class="">
+              <use xlink:href="img/sprite.svg#viber"></use>
+            </svg></a></li>
+      </ul>
+      <a href="tel:89000000000" class="header__tel">8-900 000 00 00</a>
+    </div>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="service-hero">
+  <div class="container service-hero__container">
+    <div class="service-hero__wrapper">
+      <h2 class="service-hero__title">Полировка</h2>
+      <button class="btn-reset service-hero__btn">Записаться</button>
+      <picture>
+        <source srcset="img/service/service-1.avif" type="image/avif">
+        <source srcset="img/service/service-1.webp" type="image/webp">
+        <img loading="lazy" src="img/service/service-1.png" class="service-hero__image" width="536" height="354"
+          alt="Полировка">
+      </picture>
+    </div>
+    <form action="#" class="form price__form">
+      <label class="form__label form__label--name">
+        <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+      </label>
+      <label class="form__label form__label--tel">
+        <input type="tel" name="Имя" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+      </label>
+      <label class="form__label form__label--date">
+        <input type="date" name="Имя" class="input-reset form__input" min="1900-01-01" max="3000-12-31">
+      </label>
+      <label class="form__label form__label--time">
+        <select name="location" class="form-field__select " required>
+          <option value="00:00">00:00</option>
+          <option value="01:00">01:00</option>
+          <option value="02:00">02:00</option>
+        </select>
+      </label>
+      <button class="btn-reset form__btn">Отправить</button>
+      <span class="form__remark">Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с условиями обработки персональных
+        данных</span>
+    </form>
+  </div>
+</section>
+
+      <div class="video-block">
+  <button class="btn-reset video-block__play" aria-label="Play video">
+    <svg>
+      <use xlink:href="img/sprite.svg#play"></use>
+    </svg>
+  </button>
+  <video class="video-block__content" src="context-video.mp4" muted loop preload="metadata"></video>
+</div>
+
+      <div class="container">
+  <p class="video-block__text">Равным образом, повышение уровня гражданского сознания выявляет срочную потребность направлений
+    прогрессивного развития. В рамках спецификации современных стандартов, сделанные на базе интернет-аналитики выводы,
+    инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Значимость
+    этих проблем настолько очевидна, что синтетическое тестирование не даёт нам иного выбора, кроме определения
+    экономической целесообразности принимаемых решений. Равным образом, повышение уровня гражданского сознания выявляет
+    срочную потребность направлений прогрессивного развития.
+  </p>
+</div>
+
+      <section class="price">
+  <div class="container">
+    <h2 class="price__title">Прайс</h2>
+    <div class="price__list">
+      <div class="price__item">
+        <h3 class="price__item-title">Полировка фар</h3>
+        <span class="price__item-time">от 15 мин.</span>
+        <p class="price__item-sum">от 700 ₽</p>
+        <button class="btn-reset price__item-btn">Записаться</button>
+        <form action="#" class="form price__form">
+          <label class="form__label form__label--name">
+            <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+          </label>
+          <label class="form__label form__label--tel">
+            <input type="tel" name="Имя" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+          </label>
+          <label class="form__label form__label--date">
+            <input type="date" name="Имя" class="input-reset form__input"  min="1900-01-01"
+              max="3000-12-31">
+          </label>
+          <label class="form__label form__label--time">
+            <select name="location" class="form-field__select " required>
+              <option value="00:00">00:00</option>
+              <option value="01:00">01:00</option>
+              <option value="02:00">02:00</option>
+            </select>
+          </label>
+          <button class="btn-reset form__btn">Отправить</button>
+          <span class="form__remark">Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с условиями обработки персональных
+            данных</span>
+        </form>
+      </div>
+      <div class="price__item">
+        <h3 class="price__item-title">Полировка фар</h3>
+        <span class="price__item-time">от 15 мин.</span>
+        <p class="price__item-sum">от 700 ₽</p>
+        <button class="btn-reset price__item-btn">Записаться</button>
+        <form action="#" class="form price__form">
+          <label class="form__label form__label--name">
+            <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+          </label>
+          <label class="form__label form__label--tel">
+            <input type="tel" name="Имя" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+          </label>
+          <label class="form__label form__label--date">
+            <input type="date" name="Имя" class="input-reset form__input"  min="1900-01-01"
+              max="3000-12-31">
+          </label>
+          <label class="form__label form__label--time">
+            <select name="location" class="form-field__select " required>
+              <option value="00:00">00:00</option>
+              <option value="01:00">01:00</option>
+              <option value="02:00">02:00</option>
+            </select>
+          </label>
+          <button class="btn-reset form__btn">Отправить</button>
+          <span class="form__remark">Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с условиями обработки персональных
+            данных</span>
+        </form>
+      </div>
+      <div class="price__item">
+        <h3 class="price__item-title">Полировка фар</h3>
+        <span class="price__item-time">от 15 мин.</span>
+        <p class="price__item-sum">от 700 ₽</p>
+        <button class="btn-reset price__item-btn">Записаться</button>
+        <form action="#" class="form price__form">
+          <label class="form__label form__label--name">
+            <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+          </label>
+          <label class="form__label form__label--tel">
+            <input type="tel" name="Имя" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+          </label>
+          <label class="form__label form__label--date">
+            <input type="date" name="Имя" class="input-reset form__input"  min="1900-01-01"
+              max="3000-12-31">
+          </label>
+          <label class="form__label form__label--time">
+            <select name="location" class="form-field__select " required>
+              <option value="00:00">00:00</option>
+              <option value="01:00">01:00</option>
+              <option value="02:00">02:00</option>
+            </select>
+          </label>
+          <button class="btn-reset form__btn">Отправить</button>
+          <span class="form__remark">Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с условиями обработки персональных
+            данных</span>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div class="container">
+  <p class="video-block__text">Равным образом, повышение уровня гражданского сознания выявляет срочную потребность направлений
+    прогрессивного развития. В рамках спецификации современных стандартов, сделанные на базе интернет-аналитики выводы,
+    инициированные исключительно синтетически, объявлены нарушающими общечеловеческие нормы этики и морали. Значимость
+    этих проблем настолько очевидна, что синтетическое тестирование не даёт нам иного выбора, кроме определения
+    экономической целесообразности принимаемых решений. Равным образом, повышение уровня гражданского сознания выявляет
+    срочную потребность направлений прогрессивного развития.
+  </p>
+</div>
+
+      <section class="became">
+  <div class="container">
+    <h2 class="became__title">До/после</h2>
+    <div class="became__wrapper grid">
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+
+      </div>
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+      </div>
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+      </div>
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+      </div>
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+      </div>
+      <div class="became__slider became-slider grid__item">
+        <div class="became-slider__wrap">
+          <div class="became-slider__before">
+            <picture>
+              <source srcset="img/became.avif" type="image/avif">
+              <source srcset="img/became.webp" type="image/webp">
+              <img loading="lazy" src="img/became.png" class="became-slider__image image" alt="Фото после">
+            </picture>
+          </div>
+          <div class="became-slider__after">
+            <picture>
+              <source srcset="img/article-1.avif" type="image/avif">
+              <source srcset="img/article-1.webp" type="image/webp">
+              <img loading="lazy" src="img/article-1.png" class="became-slider__image image" alt="Фото до">
+            </picture>
+          </div>
+          <div class="became-slider__change">
+            <span class="became-slider__ch"></span>
+          </div>
+        </div>
+        <h3 class="became-slider__title">Mazda 3</h3>
+        <p class="became-slider__text">комплекс Работ: Полировка боковых стекл</p>
+      </div>
+    </div>
+  </div>
+  <div class="swiper after-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="after-slide">
+          <picture>
+            <source srcset="img/article-1.avif" type="image/avif">
+            <source srcset="img/article-1.webp" type="image/webp">
+            <img loading="lazy" src="img/article-1.png" class="after-image" width="456" height="257" alt="Машина">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="swiper-scrollbar after-scrollbar"></div>
+  </div>
+</section>
+
+      <section class="make">
+  <div class="container">
+    <h2 class="make__title">Записаться</h2>
+    <form action="#" class="form">
+      <label class="form__label form__label--name">
+        <input type="text" name="Имя" class="input-reset form__input" placeholder="Ваше имя">
+      </label>
+      <label class="form__label form__label--tel">
+        <input type="tel" name="Имя" class="input-reset form__input" placeholder="+7 (___) ___-__-__">
+      </label>
+      <label for="datepicker" class="form__label form__label--date">
+        <input type="text" name="Имя" id="input" class="input-reset form__input">
+      </label>
+      <label class="form__label form__label--time">
+        <select name="location" class="form-field__select " required>
+          <option value="00:00">00:00</option>
+          <option value="01:00">01:00</option>
+          <option value="02:00">02:00</option>
+        </select>
+      </label>
+      <button class="btn-reset form__btn">Отправить</button>
+      <span class="form__remark">Нажимая кнопку «ОТПРАВИТЬ» вы соглашаетесь с условиями обработки персональных данных</span>
+    </form>
+  </div>
+</section>
+
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__top">
+      <a href="index.html" class="logo footer__logo">
+        <img loading="lazy" src="img/logo.svg" class="image" width="165" height="79" alt="Логотип Juicy">
+      </a>
+      <address class="footer__address">
+        <span class="footer__text">Адрес: Нижний новгород,</span>
+        <span class="footer__text">ул. уличная, 00, стр 1</span>
+        <button class="btn-reset footer__address-link" data-graph-path="footer__modal">показать на карте</button>
+      </address>
+      <div class="footer__hours ">
+        <p class="footer__text">пн — пт: 09:00 — 21:00</p>
+        <p class="footer__text">Сб — ВС: 09:00 — 18:00</p>
+      </div>
+      <div class="footer__cont">
+        <a href="tel:89000000000" class="footer__tel">8-900 000 00 00</a>
+        <ul class="list-reset social footer__social">
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--tg"
+              aria-label="Наш telegram">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#telegramm"></use>
+              </svg>
+            </a></li>
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--wa"
+              aria-label="Наш whatsapp">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#watsapp"></use>
+              </svg></a></li>
+          <li class="social__item"><a href="#" target="_blank" class="social__link social__link--vb"
+              aria-label="Наш viber">
+              <svg class="">
+                <use xlink:href="img/sprite.svg#viber"></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__bottom-link">Все права защищены © 2022</span>
+      <a href="#" class="footer__bottom-link">Публичная оферта</a>
+      <a href="#" class="footer__bottom-link">
+        <span class="footer__bottom-text">Разработка сайтов</span>
+        <svg class="footer__bottom-artix">
+          <use xlink:href="img/sprite.svg#artix"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+    <div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="hero__modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="video-block">
+        <button class="btn-reset video-block__play" aria-label="Play video">
+          <svg>
+            <use xlink:href="img/sprite.svg#play"></use>
+          </svg>
+        </button>
+        <video class="video-block__content" src="context-video.mp4" muted loop preload="metadata"></video>
+      </div>
+    </div>
+  </div>
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="footer__modal">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div id="maps" class="footer__map" style="width: 100%; height: 300px"></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
